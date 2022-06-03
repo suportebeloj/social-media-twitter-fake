@@ -1,0 +1,19 @@
+@media screen and (min-width: 702px){
+    .container {
+      height: calc(100vh - 160px) !important;
+    }
+}
+
+@media screen and (max-width: 701px){
+    .container.mt-5 .row {
+        flex-direction: column-reverse !important;
+    }
+    .container.mt-5 .row .col-4{
+        width: 100% !important;
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+}

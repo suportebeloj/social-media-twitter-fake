@@ -1,0 +1,22 @@
+{% extends 'landing/base_landing.html' %}
+{% block content %}
+<div class="row">
+  <div class="col">
+    <h1 class="display-4 mt-5">Make login and enjoi, or register!</h1>
+    <p class="lead">
+      This is a lead paragraph. It stands out from regular paragraphs.
+    </p>
+  </div>
+  <div class="col-4">
+      <div class="container">
+          <form action="" method="post">
+              {% csrf_token %}
+              {{form.as_p}}
+              <div class="d-grid gap-2">
+                  <button class="btn btn-outline-primary" type="submit">Login</button>
+              </div>
+          </form>
+        </div>
+  </div>
+</div>
+{% endblock content %}

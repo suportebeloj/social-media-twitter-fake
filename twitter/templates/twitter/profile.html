@@ -1,0 +1,28 @@
+{% extends 'twitter/base_app.html' %}
+{% load static %}
+
+{% block relative_css_imports %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock relative_css_imports %}
+
+{% block content %}
+<div class="row bg-dark banner-profile">
+    <div class="col-2 container-profile-image">
+        <img src="{{ profile.image.url }}" alt="profile pic">
+    </div>
+    <div class="col text-white profile-basic-info">
+        <h1 class="display-6">{{profile.user.username}}</h1>
+        <p class="follow-p">
+            Followed by
+            <a href="" class="">
+                {% for follow in profile.follows.all %}
+                    {{follow}}
+                {% endfor %}
+            </a>
+        </p>
+    </div>
+</div>
+<div class="container container-content">
+
+</div>
+{% endblock content %}

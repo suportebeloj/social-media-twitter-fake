@@ -1,0 +1,33 @@
+{% extends 'landing/base_landing.html' %}
+{% block content %}
+    <div class="row">
+        <div class="col">
+            <p class="display-5">
+                Register and enjoy in the new world!
+            </p>
+        </div>
+        <div class="col-4">
+            <form action="" method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="">
+                    <label for="exampleFormControlInput1" class="form-label">{{ field.label }}</label>
+                    {{ field }}
+                </div>
+                {% endfor %}
+                <div class="d-grid gap-2 mt-2">
+                    <button type="submit" class="btn btn-outline-success">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+            
+        }
+    </script>
+{% endblock content %}

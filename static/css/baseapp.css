@@ -1,0 +1,4 @@
+/* remove arrow down nav bar */
+#navbarTopMenuBar .dropdown-toggle::after {
+    content: none !important;
+}
